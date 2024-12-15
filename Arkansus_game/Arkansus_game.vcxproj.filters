@@ -13,5 +13,36 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Исходные файлы\Events">
+      <UniqueIdentifier>{516a7759-b9b8-40f7-8bc2-4f686e47c683}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Game Mechanics">
+      <UniqueIdentifier>{80d15bb1-6583-49b1-9fd4-b7af190836b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Main">
+      <UniqueIdentifier>{f0c7e38d-ad23-45ce-9487-5634298e1f23}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="events_1931.cpp">
+      <Filter>Исходные файлы\Events</Filter>
+    </ClCompile>
+    <ClCompile Include="fight.cpp">
+      <Filter>Исходные файлы\Game Mechanics</Filter>
+    </ClCompile>
+    <ClCompile Include="game_points.cpp">
+      <Filter>Исходные файлы\Game Mechanics</Filter>
+    </ClCompile>
+    <ClCompile Include="game_main.cpp">
+      <Filter>Исходные файлы\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="random_event.cpp">
+      <Filter>Исходные файлы\Main</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="structure.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
