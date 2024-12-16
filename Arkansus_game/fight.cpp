@@ -14,7 +14,7 @@ void fight(int enemy_max_damage, int enemy_protection, int enemy_health)
     if (enemy_health <= 0 || enemy_max_damage <= 0 || enemy_protection <= 0)
     {
         enemy_health = 15;
-        enemy_max_damage = 1;
+        enemy_max_damage = 2;
         enemy_protection = 1;
     }
 
