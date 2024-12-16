@@ -17,7 +17,7 @@ void events_1931()
     должно быть указано после каждого case! Она занимается
     начисление очков за каждое выбранное действие игроком.*/
 
-    int enemy_max_damage;fbd
+    int enemy_max_damage;
     int enemy_protection;
     int enemy_health;
 
