@@ -39,6 +39,9 @@
     <ClCompile Include="random_event.cpp">
       <Filter>Исходные файлы\Main</Filter>
     </ClCompile>
+    <ClCompile Include="events_1952.cpp">
+      <Filter>Исходные файлы\Events</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="structure.h">

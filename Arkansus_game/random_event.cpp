@@ -32,6 +32,7 @@ void event_selection()
 		case 3:
 			break;
 		case 4:
+			events_1952();
 			break;
 		default:
 			break;
