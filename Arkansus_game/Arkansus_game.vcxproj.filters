@@ -42,6 +42,18 @@
     <ClCompile Include="events_1952.cpp">
       <Filter>Исходные файлы\Events</Filter>
     </ClCompile>
+    <ClCompile Include="People_are_furious.cpp">
+      <Filter>Исходные файлы\Game Mechanics</Filter>
+    </ClCompile>
+    <ClCompile Include="technology_discussion_event.cpp">
+      <Filter>Исходные файлы\Game Mechanics</Filter>
+    </ClCompile>
+    <ClCompile Include="play_durak.cpp">
+      <Filter>Исходные файлы\Game Mechanics</Filter>
+    </ClCompile>
+    <ClCompile Include="increase_police_patrols_event.cpp">
+      <Filter>Исходные файлы\Game Mechanics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="structure.h">

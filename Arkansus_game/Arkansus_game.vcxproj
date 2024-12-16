@@ -132,7 +132,11 @@
     <ClCompile Include="game_points.cpp" />
     <ClCompile Include="game_main.cpp" />
     <ClCompile Include="events_1952.cpp" />
+    <ClCompile Include="increase_police_patrols_event.cpp" />
+    <ClCompile Include="People_are_furious.cpp" />
+    <ClCompile Include="play_durak.cpp" />
     <ClCompile Include="random_event.cpp" />
+    <ClCompile Include="technology_discussion_event.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="structure.h" />

@@ -31,10 +31,22 @@ void events_1952()
             game_points(karma_points);
             break;
         case 2:
+
             cout << "Вы объявили о прекращении поставок. Люди в ярости!" << endl;
-            karma_points = -2; // Уменьшаем карму.
-            game_points(karma_points);
-            break;
+            int success_chance = rand() % 10; //В данном варианте ответа, есть две развилки с различными событиями.
+            if (success_chance < 6)
+            {
+                cout << "Люди собираются на вас напасть, но у тебя есть фанс всё исправить";
+                peopleAreFurious(); // Передача выполнения функции
+                break;
+            }
+            else
+            {
+                cout << "Вас избили и вы в минус вайбе";
+                karma_points = 1;
+                game_points(karma_points);
+                break;
+            }
         default:
             cout << "Вы проигнорировали проблему, и она только усугубилась." << endl;
             karma_points = -3;
@@ -112,44 +124,36 @@ void events_1952()
         }
     }
     if (incident == 4) {
-        cout << "Житель: Мэр, в городе бушует голод!" << endl;
-        cout << "1 - Организовать раздачу еды." << endl;
-        cout << "2 - Игнорировать, жители справятся." << endl;
-        cout << "3 - Объявить о необходимости экономить продукты." << endl;
-
-        int choice;
-        cout << "-> "; cin >> choice;
-
-        int karma_points;
-        switch (choice)
         {
-        case 1:
-            cout << "Раздача еды помогла многим жителям!" << endl;
-            karma_points = 3;
-            game_points(karma_points);
-            break;
-        case 2:
-            cout << "Игнорирование проблемы привело к бунту." << endl;
-            karma_points = -3;
-            game_points(karma_points);
-            break;
-        case 3:
-        {
-            int response_chance = rand() % 10; // Шанс позитивной реакции
-            if (response_chance < 5)
+            setlocale(LC_CTYPE, "Russian");
+
+            cout << "Жители: Мэр, мы хотим провести игровой вечер с игрой в дурака! Хотите поиграть с нами?" << endl;
+            cout << "1 - Да, я присоединюсь!" << endl;
+            cout << "2 - Нет, у меня есть дела." << endl;
+
+            int choice;
+            cout << "-> "; cin >> choice;
+
+            if (choice == 1)
             {
-                cout << "Жители оценили ваш жест, но голод все еще остается." << endl;
-                karma_points = 1;
+                cout << "Вы присоединились к игре в дурака!" << endl;
+                int game_result = play_durak(); // Вызов функции игры в дурака
+                if (game_result == 1)
+                {
+                    cout << "Вы выиграли игру! Жители рады и восхищены!" << endl;
+                    game_points(3); // Увеличиваем карму
+                }
+                else
+                {
+                    cout << "Вы проиграли, но жители оценили ваше участие!" << endl;
+                    game_points(1); // Небольшое увеличение кармы
+                }
             }
             else
             {
-                cout << "Жители недовольны и требуют действий!" << endl;
-                karma_points = -2;
+                cout << "Вы отказались от участия, и жители немного расстроены." << endl;
+                game_points(-1); // Уменьшаем карму
             }
-            game_points(karma_points);
-            break;
-        }
-        }
     }
     if (incident == 5) {
         cout << "Инженер: Мэр, мы можем ввести новые технологии для улучшения жизни в городе!" << endl;
